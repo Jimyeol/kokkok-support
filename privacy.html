@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>구독콕콕 개인정보 처리방침</title>
+  <meta name="description" content="구독콕콕 개인정보 처리방침">
+  <style>
+    :root {
+      --violet: #6d5dfc;
+      --violet-light: #a78bfa;
+      --lime: #d4ff4f;
+      --ink: #17171c;
+      --muted: #666674;
+      --line: #edebf3;
+      --paper: #f4f3f8;
+      --card: #ffffff;
+      --danger: #ff5c5c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--violet); font-weight: 800; }
+
+    .wrap {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 10px 24px rgba(109, 93, 252, 0.24);
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--card);
+      padding: 34px;
+      box-shadow: 0 8px 28px rgba(109, 93, 252, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    ul { padding-left: 22px; }
+
+    .lead {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .notice {
+      margin: 22px 0;
+      padding: 18px;
+      border: 2px solid rgba(109, 93, 252, 0.18);
+      border-radius: 18px;
+      background: #f8f6ff;
+    }
+
+    .label {
+      display: inline-block;
+      margin: 4px 6px 0 0;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #f0eef6;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+
+    .tag {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: #f0eef6;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .callout {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(109, 93, 252, 0.1), rgba(212, 255, 79, 0.32));
+    }
+
+    .callout p { margin: 0; color: var(--ink); font-weight: 750; }
+
+    footer {
+      padding: 28px 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 680px) {
+      .wrap { padding: 18px; }
+      .panel { padding: 24px; border-radius: 22px; }
+      .nav { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="주요 링크">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">콕</span>
+        <span>구독콕콕</span>
+      </a>
+      <a href="index.html">지원 홈</a>
+    </nav>
+
+    <article class="panel">
+      <h1>개인정보 처리방침</h1>
+      <p class="lead">구독콕콕은 사용자가 직접 입력한 구독 정보를 기기 안에 저장하는 개인용 구독 관리 앱입니다.</p>
+
+      <div class="notice">
+        <p>개인정보처리자: mazecube</p>
+        <p>문의 이메일: <a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+        <p><span class="label">시행일 2026-10-10</span></p>
+      </div>
+
+      <div class="meta" aria-label="처리 요약">
+        <span class="tag">로그인 없음</span>
+        <span class="tag">광고 없음</span>
+        <span class="tag">분석 SDK 없음</span>
+        <span class="tag">서버 백업 없음</span>
+        <span class="tag">Frankfurter 환율 API</span>
+      </div>
+
+      <h2>1. 처리하는 정보</h2>
+      <p>구독콕콕은 사용자가 앱 안에서 직접 입력한 정보를 기기 안에 저장합니다. 저장될 수 있는 정보는 다음과 같습니다.</p>
+      <ul>
+        <li>구독 서비스명, 카테고리, 아이콘 설정</li>
+        <li>요금, 통화, 결제 주기, 첫 결제일, 해지 예정일</li>
+        <li>결제 수단 메모, 알림 설정일, 사용자가 입력한 메모</li>
+        <li>화면 모드, 환율 설정 같은 앱 설정값</li>
+      </ul>
+      <p>사용자가 구독 아이콘으로 사진을 선택하면 앱은 선택한 사진을 앱 전용 저장 공간에 복사합니다. 앨범의 원본 사진은 앱이 삭제하지 않습니다.</p>
+
+      <h2>2. 예상 계산 안내</h2>
+      <div class="callout">
+        <p>앱이 보여주는 금액, 결제일, D-day, 통계는 사용자가 입력한 값을 바탕으로 계산한 예상 정보입니다. 구독콕콕은 실제 결제 성공 여부를 확인하지 않으며, 외부 구독 서비스를 자동으로 해지하거나 변경하지 않습니다.</p>
+      </div>
+
+      <h2>3. 외부 전송</h2>
+      <p>구독콕콕은 사용자가 입력한 구독명, 금액, 결제일, 결제 수단, 메모, 사진을 앱 서버로 전송하지 않습니다.</p>
+      <p>달러 환율 자동 갱신을 켠 경우 앱은 Frankfurter v1 공개 환율 API에 USD/KRW 환율 요청을 보냅니다. 이 요청에는 사용자가 입력한 구독 정보나 금액이 포함되지 않습니다. Frankfurter는 공개 API가 개인 데이터, IP 주소, 요청 URL을 수집하거나 기록하지 않는다고 설명합니다.</p>
+      <p>Frankfurter는 중앙은행과 공식 기관의 공개 기준환율을 모아 제공하며, v1 최신 환율은 최신 영업일 기준으로 일별 갱신됩니다. ECB 통계는 출처를 표기하고 통계를 수정하지 않는 조건에서 상업적·비상업적 재사용이 허용됩니다. 구독콕콕은 환율 값을 사용자가 입력한 달러 금액의 원화 예상액을 계산하는 데만 사용합니다.</p>
+      <p>환율 출처: <a href="https://frankfurter.dev/v1/">Frankfurter v1 API</a>, <a href="https://frankfurter.dev/license/">Frankfurter License & Terms</a>, <a href="https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html">ECB statistics reuse policy</a>. Source: Frankfurter and ECB statistics.</p>
+
+      <h2>4. 권한 사용</h2>
+      <ul>
+        <li>알림: 사용자가 설정한 결제 예정일 전에 로컬 알림을 보내기 위해 사용합니다.</li>
+        <li>사진 보관함: 사용자가 구독 아이콘으로 쓸 사진을 선택할 때만 사용합니다.</li>
+        <li>인터넷: 달러 환율 자동 갱신을 위해 사용합니다.</li>
+        <li>부팅 완료 수신(Android): 기기 재시작 후 예약된 로컬 알림을 유지하기 위해 사용합니다.</li>
+      </ul>
+
+      <h2>5. 보관 및 삭제</h2>
+      <p>구독 정보와 설정은 사용자의 기기 안에 저장됩니다. 사용자는 앱 안에서 개별 구독을 삭제하거나 설정에서 모든 구독 데이터를 지울 수 있습니다.</p>
+      <p>앱에서 모든 구독 데이터를 지우면 앱이 저장한 구독 정보와 앱 전용 저장 공간에 복사한 아이콘 파일도 함께 삭제됩니다. 앨범에 있던 원본 사진은 삭제되지 않습니다.</p>
+      <p>앱을 삭제하면 앱 전용 저장 공간의 데이터는 운영체제 정책에 따라 삭제됩니다. 다만 사용자가 iCloud, Google 백업, 기기 백업 또는 복원 기능을 켠 경우, 운영체제 설정에 따라 앱 데이터가 백업되거나 새 기기로 복원될 수 있습니다.</p>
+
+      <h2>6. 제3자 제공 및 공유</h2>
+      <p>현재 버전은 사용자가 입력한 구독 정보를 제3자에게 제공하거나 공유하지 않습니다. 환율 요청은 구독 정보 없이 환율 조회 목적으로만 사용됩니다.</p>
+
+      <h2>7. 아동 개인정보</h2>
+      <p>구독콕콕은 아동을 주 대상 사용자로 설계되지 않았습니다. 앱 스토어의 연령 등급과 타겟 연령 설정은 출시 전 별도로 확정해야 합니다.</p>
+
+      <h2>8. 변경</h2>
+      <p>로그인, 서버 백업, 광고, 분석, 결제, 외부 공유 기능이 추가되면 이 개인정보 처리방침과 앱 스토어 개인정보 고지를 함께 업데이트합니다.</p>
+
+      <h2>9. 문의</h2>
+      <p>개인정보 관련 문의는 아래 이메일로 연락해 주세요.</p>
+      <p><a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+    </article>
+
+    <footer>
+      <p>© 구독콕콕. 이 페이지는 외부 분석 스크립트를 사용하지 않습니다.</p>
+    </footer>
+  </main>
+</body>
+</html>

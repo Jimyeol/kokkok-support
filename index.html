@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>구독콕콕 지원</title>
+  <meta name="description" content="구독콕콕 앱 지원, 문의, 개인정보 처리방침 안내">
+  <style>
+    :root {
+      --violet: #6d5dfc;
+      --violet-light: #a78bfa;
+      --lime: #d4ff4f;
+      --ink: #17171c;
+      --muted: #666674;
+      --line: #edebf3;
+      --paper: #f4f3f8;
+      --card: #ffffff;
+      --danger: #ff5c5c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 10px 24px rgba(109, 93, 252, 0.24);
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 44px;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(212, 255, 79, 0.9), transparent 18rem),
+        linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 18px 48px rgba(109, 93, 252, 0.22);
+    }
+
+    h1 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      padding: 24px;
+      box-shadow: 0 8px 28px rgba(109, 93, 252, 0.08);
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 10px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .card ul {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card ul { padding-left: 20px; }
+
+    .notice {
+      margin-top: 18px;
+      border: 2px solid rgba(109, 93, 252, 0.18);
+      background: #f8f6ff;
+    }
+
+    .label {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #f0eef6;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .button.secondary {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    footer {
+      padding: 34px 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 18px; }
+      .nav { align-items: flex-start; }
+      .hero { padding: 30px 24px; border-radius: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="주요 링크">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">콕</span>
+        <span>구독콕콕</span>
+      </div>
+      <a href="privacy.html">개인정보 처리방침</a>
+    </nav>
+
+    <section class="hero">
+      <h1>매달 나가는 구독료와 다음 결제일을 한눈에.</h1>
+      <p>구독콕콕은 사용자가 직접 입력한 구독 정보를 바탕으로 월 지출, 결제 D-day, 카테고리별 통계를 보여주는 개인용 구독 관리 앱입니다.</p>
+      <span class="pill">무료 앱 · 로그인 없음 · 로컬 저장</span>
+    </section>
+
+    <section class="card notice" aria-labelledby="support-info">
+      <h2 id="support-info">지원 정보</h2>
+      <p>운영자: mazecube</p>
+      <p>문의 이메일: <a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <p><span class="label">시행일 2026-10-10</span></p>
+    </section>
+
+    <section class="grid" aria-label="지원 정보">
+      <article class="card">
+        <h2>앱이 하는 일</h2>
+        <p>구독 이름, 요금, 결제 주기, 결제일, 알림일, 메모를 사용자가 직접 등록하면 앱 안에서 다음 결제일과 월 기준 지출을 계산합니다.</p>
+      </article>
+
+      <article class="card">
+        <h2>알아둘 점</h2>
+        <p>구독콕콕의 금액과 결제일은 사용자가 입력한 값을 바탕으로 한 예상 정보입니다. 실제 결제 성공 여부를 확인하거나 구독 서비스 해지를 대신 처리하지 않습니다.</p>
+      </article>
+
+      <article class="card">
+        <h2>데이터 보관</h2>
+        <p>구독 정보는 기기 안에 저장됩니다. 앱 설정의 전체 삭제나 앱 삭제로 앱 데이터가 삭제되며, 운영체제 백업과 복원 설정에 따라 기기 데이터가 백업될 수 있습니다.</p>
+      </article>
+    </section>
+
+    <section class="grid" aria-label="자주 묻는 질문">
+      <article class="card">
+        <h3>구독을 해지해 주나요?</h3>
+        <p>아니요. 앱은 해지 예정일을 기록하고 이후 계산에서 제외할 수 있지만, 각 서비스의 실제 구독 해지는 사용자가 해당 서비스에서 직접 해야 합니다.</p>
+      </article>
+
+      <article class="card">
+        <h3>실제 결제 내역을 읽나요?</h3>
+        <p>아니요. 카드, 은행, 이메일, 문자, 앱스토어 결제 내역을 자동으로 읽지 않습니다. 사용자가 입력한 내용을 기준으로 계산합니다.</p>
+      </article>
+
+      <article class="card">
+        <h3>사진 아이콘은 어떻게 되나요?</h3>
+        <p>앨범에서 선택한 사진은 앱 전용 저장 공간에 복사됩니다. 앱에서 데이터를 지우면 앱이 복사한 아이콘 파일은 삭제되지만, 앨범의 원본 사진은 삭제되지 않습니다.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>환율 출처</h2>
+      <p>달러 구독료의 원화 환산은 Frankfurter v1 공개 API의 최신 영업일 USD/KRW 환율을 사용합니다. Frankfurter는 중앙은행과 공식 기관의 공개 기준환율을 모아 제공하며, v1 최신 환율은 영업일 기준 일별 갱신됩니다.</p>
+      <p>ECB 통계는 출처를 표기하고 통계를 수정하지 않는 조건에서 상업적·비상업적 재사용이 허용됩니다. 구독콕콕의 환율 환산은 사용자가 입력한 금액을 이해하기 위한 참고용 예상 계산입니다.</p>
+      <p class="links"><a href="https://frankfurter.dev/v1/">Frankfurter v1 문서</a> <a href="https://frankfurter.dev/license/">Frankfurter License & Terms</a> <a href="https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html">ECB statistics reuse policy</a></p>
+      <p>Source: Frankfurter and ECB statistics.</p>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>문의</h2>
+      <p>앱 문제, 개인정보 문의, 기능 제안은 아래 이메일로 보내주세요.</p>
+      <p><a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <div class="links">
+        <a class="button" href="privacy.html">개인정보 처리방침 보기</a>
+        <a class="button secondary" href="#support-info">지원 정보</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 구독콕콕. 이 페이지는 정적 HTML로 제공되며 외부 분석 스크립트를 사용하지 않습니다.</p>
+    </footer>
+  </main>
+</body>
+</html>
