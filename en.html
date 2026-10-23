@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KokKok Support</title>
+  <meta name="description" content="Support, contact, and privacy policy information for the KokKok app">
+  <link rel="alternate" hreflang="ko" href="https://jimyeol.github.io/kokkok-support/">
+  <link rel="alternate" hreflang="en" href="https://jimyeol.github.io/kokkok-support/en.html">
+  <link rel="alternate" hreflang="ja" href="https://jimyeol.github.io/kokkok-support/ja.html">
+  <style>
+    :root {
+      --violet: #6d5dfc;
+      --violet-light: #a78bfa;
+      --lime: #d4ff4f;
+      --ink: #17171c;
+      --muted: #666674;
+      --line: #edebf3;
+      --paper: #f4f3f8;
+      --card: #ffffff;
+      --danger: #ff5c5c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 10px 24px rgba(109, 93, 252, 0.24);
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .nav-end {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px 12px;
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav .lang a {
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .nav .lang a[aria-current="page"] {
+      background: #f0eef6;
+      color: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 44px;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(212, 255, 79, 0.9), transparent 18rem),
+        linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 18px 48px rgba(109, 93, 252, 0.22);
+    }
+
+    h1 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      padding: 24px;
+      box-shadow: 0 8px 28px rgba(109, 93, 252, 0.08);
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 10px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .card ul {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card ul { padding-left: 20px; }
+
+    .notice {
+      margin-top: 18px;
+      border: 2px solid rgba(109, 93, 252, 0.18);
+      background: #f8f6ff;
+    }
+
+    .label {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #f0eef6;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .button.secondary {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    footer {
+      padding: 34px 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 18px; }
+      .nav { align-items: flex-start; }
+      .hero { padding: 30px 24px; border-radius: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="Main links">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">K</span>
+        <span>KokKok</span>
+      </div>
+      <div class="nav-end">
+        <div class="lang" role="group" aria-label="Language">
+          <a href="index.html" hreflang="ko" lang="ko">한국어</a>
+          <span aria-hidden="true">·</span>
+          <a href="en.html" hreflang="en" lang="en" aria-current="page">English</a>
+          <span aria-hidden="true">·</span>
+          <a href="ja.html" hreflang="ja" lang="ja">日本語</a>
+        </div>
+        <a href="privacy-en.html">Privacy Policy</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Your monthly subscription costs and next billing dates, at a glance.</h1>
+      <p>KokKok is a personal subscription tracker that shows your monthly spending, billing countdowns, and per-category stats based on the subscription details you enter yourself.</p>
+      <span class="pill">Free · No sign-in · Stored on your device</span>
+    </section>
+
+    <section class="card notice" aria-labelledby="support-info">
+      <h2 id="support-info">Support Information</h2>
+      <p>Developer: mazecube</p>
+      <p>Contact email: <a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <p><span class="label">Effective 2026-10-23</span></p>
+    </section>
+
+    <section class="grid" aria-label="Support information">
+      <article class="card">
+        <h2>What the App Does</h2>
+        <p>When you add a subscription's name, price, billing cycle, billing date, reminder day, and notes, the app calculates your next billing date and monthly spending within the app.</p>
+      </article>
+
+      <article class="card">
+        <h2>Good to Know</h2>
+        <p>Amounts and billing dates in KokKok are estimates based on the values you enter. The app does not check whether a payment actually went through, and it does not cancel subscriptions on your behalf.</p>
+      </article>
+
+      <article class="card">
+        <h2>Data Storage</h2>
+        <p>Your subscription information is stored on your device. App data is deleted when you use "Delete all subscriptions" in the app's Settings or delete the app. Depending on your operating system's backup and restore settings, device data may be backed up.</p>
+      </article>
+    </section>
+
+    <section class="grid" aria-label="Frequently asked questions">
+      <article class="card">
+        <h3>Does the app cancel my subscriptions?</h3>
+        <p>No. The app can record a planned cancellation date and exclude the subscription from later calculations, but you need to cancel each subscription directly with the service itself.</p>
+      </article>
+
+      <article class="card">
+        <h3>Does it read my actual payment history?</h3>
+        <p>No. The app does not automatically read card, bank, email, text message, or app store payment history. Calculations are based on what you enter.</p>
+      </article>
+
+      <article class="card">
+        <h3>What happens to photo icons?</h3>
+        <p>A photo you choose from your photo library is copied into the app's private storage. When you delete data in the app, the icon files the app copied are deleted, but the original photos in your library are not.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>Exchange Rate Source</h2>
+      <p>To convert subscription prices in other currencies into your base currency, the app uses the latest business-day exchange rates (USD-based) from the Frankfurter v1 public API. Frankfurter aggregates public reference rates from central banks and official institutions, and its v1 latest rates are updated daily on business days.</p>
+      <p>ECB statistics may be reused for commercial and non-commercial purposes, provided the source is acknowledged and the statistics are not modified. Currency conversion in KokKok is an estimate provided for reference to help you understand the amounts you enter.</p>
+      <p class="links"><a href="https://frankfurter.dev/v1/">Frankfurter v1 documentation</a> <a href="https://frankfurter.dev/license/">Frankfurter License & Terms</a> <a href="https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html">ECB statistics reuse policy</a></p>
+      <p>Source: Frankfurter and ECB statistics.</p>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>Contact</h2>
+      <p>For app issues, privacy questions, or feature suggestions, please email us at the address below.</p>
+      <p><a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <div class="links">
+        <a class="button" href="privacy-en.html">View Privacy Policy</a>
+        <a class="button secondary" href="#support-info">Support Information</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© KokKok. This page is served as static HTML and does not use any external analytics scripts.</p>
+    </footer>
+  </main>
+</body>
+</html>

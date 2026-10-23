@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KokKok サポート</title>
+  <meta name="description" content="KokKokアプリのサポート、お問い合わせ、プライバシーポリシーのご案内">
+  <link rel="alternate" hreflang="ko" href="https://jimyeol.github.io/kokkok-support/">
+  <link rel="alternate" hreflang="en" href="https://jimyeol.github.io/kokkok-support/en.html">
+  <link rel="alternate" hreflang="ja" href="https://jimyeol.github.io/kokkok-support/ja.html">
+  <style>
+    :root {
+      --violet: #6d5dfc;
+      --violet-light: #a78bfa;
+      --lime: #d4ff4f;
+      --ink: #17171c;
+      --muted: #666674;
+      --line: #edebf3;
+      --paper: #f4f3f8;
+      --card: #ffffff;
+      --danger: #ff5c5c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 10px 24px rgba(109, 93, 252, 0.24);
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .nav-end {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px 12px;
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav .lang a {
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .nav .lang a[aria-current="page"] {
+      background: #f0eef6;
+      color: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 44px;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(212, 255, 79, 0.9), transparent 18rem),
+        linear-gradient(135deg, var(--violet), var(--violet-light));
+      color: white;
+      box-shadow: 0 18px 48px rgba(109, 93, 252, 0.22);
+    }
+
+    h1 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 26px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      padding: 24px;
+      box-shadow: 0 8px 28px rgba(109, 93, 252, 0.08);
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 10px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .card ul {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card ul { padding-left: 20px; }
+
+    .notice {
+      margin-top: 18px;
+      border: 2px solid rgba(109, 93, 252, 0.18);
+      background: #f8f6ff;
+    }
+
+    .label {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #f0eef6;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .button.secondary {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    footer {
+      padding: 34px 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { padding: 18px; }
+      .nav { align-items: flex-start; }
+      .hero { padding: 30px 24px; border-radius: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="主なリンク">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">K</span>
+        <span>KokKok</span>
+      </div>
+      <div class="nav-end">
+        <div class="lang" role="group" aria-label="言語">
+          <a href="index.html" hreflang="ko" lang="ko">한국어</a>
+          <span aria-hidden="true">·</span>
+          <a href="en.html" hreflang="en" lang="en">English</a>
+          <span aria-hidden="true">·</span>
+          <a href="ja.html" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+        </div>
+        <a href="privacy-ja.html">プライバシーポリシー</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>毎月のサブスク料金と次回の支払日をひと目で。</h1>
+      <p>KokKokは、ご自身で入力したサブスクリプション情報をもとに、月々の支出、支払日までの日数、カテゴリ別の統計を表示する個人向けのサブスク管理アプリです。</p>
+      <span class="pill">無料 · ログイン不要 · 端末内に保存</span>
+    </section>
+
+    <section class="card notice" aria-labelledby="support-info">
+      <h2 id="support-info">サポート情報</h2>
+      <p>運営者：mazecube</p>
+      <p>お問い合わせメール：<a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <p><span class="label">施行日 2026-10-23</span></p>
+    </section>
+
+    <section class="grid" aria-label="サポート情報">
+      <article class="card">
+        <h2>アプリでできること</h2>
+        <p>サブスクの名前、料金、支払いサイクル、支払日、通知日、メモを登録すると、次回の支払日と月あたりの支出をアプリ内で計算します。</p>
+      </article>
+
+      <article class="card">
+        <h2>ご注意ください</h2>
+        <p>KokKokに表示される金額や支払日は、入力された値をもとにした予測です。実際の支払いが完了したかどうかの確認や、サブスクの解約手続きの代行は行いません。</p>
+      </article>
+
+      <article class="card">
+        <h2>データの保存</h2>
+        <p>サブスク情報は端末内に保存されます。アプリの設定にある「すべてのサブスクを削除」を行うか、アプリを削除するとアプリのデータは削除されます。OSのバックアップ・復元の設定によっては、端末のデータがバックアップされる場合があります。</p>
+      </article>
+    </section>
+
+    <section class="grid" aria-label="よくある質問">
+      <article class="card">
+        <h3>サブスクを解約してくれますか？</h3>
+        <p>いいえ。アプリでは解約予定日を記録し、以降の計算から除外できますが、各サービスの実際の解約手続きはご自身で各サービス上で行っていただく必要があります。</p>
+      </article>
+
+      <article class="card">
+        <h3>実際の支払い履歴を読み取りますか？</h3>
+        <p>いいえ。カード、銀行、メール、SMS、アプリストアの支払い履歴を自動で読み取ることはありません。入力された内容をもとに計算します。</p>
+      </article>
+
+      <article class="card">
+        <h3>写真アイコンはどう扱われますか？</h3>
+        <p>写真ライブラリから選んだ写真は、アプリ専用の保存領域にコピーされます。アプリでデータを削除すると、アプリがコピーしたアイコンファイルは削除されますが、写真ライブラリの元の写真は削除されません。</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>為替レートの出典</h2>
+      <p>外貨建てのサブスク料金を基準通貨に換算する際は、Frankfurter v1 公開APIの最新営業日の為替レート（米ドル基準）を使用します。Frankfurterは中央銀行や公的機関が公表する参照レートを集約して提供しており、v1の最新レートは営業日ごとに毎日更新されます。</p>
+      <p>ECBの統計は、出典を明記し統計を改変しないことを条件に、商用・非商用を問わず再利用が認められています。KokKokの為替換算は、入力された金額を把握するための参考用の概算です。</p>
+      <p class="links"><a href="https://frankfurter.dev/v1/">Frankfurter v1 ドキュメント</a> <a href="https://frankfurter.dev/license/">Frankfurter License & Terms</a> <a href="https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html">ECB statistics reuse policy</a></p>
+      <p>Source: Frankfurter and ECB statistics.</p>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>お問い合わせ</h2>
+      <p>アプリの不具合、個人情報に関するお問い合わせ、機能のご要望は、以下のメールアドレスまでお送りください。</p>
+      <p><a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
+      <div class="links">
+        <a class="button" href="privacy-ja.html">プライバシーポリシーを見る</a>
+        <a class="button secondary" href="#support-info">サポート情報</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© KokKok. このページは静的HTMLで提供されており、外部の分析スクリプトは使用していません。</p>
+    </footer>
+  </main>
+</body>
+</html>

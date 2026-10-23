@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>구독콕콕 지원</title>
   <meta name="description" content="구독콕콕 앱 지원, 문의, 개인정보 처리방침 안내">
+  <link rel="alternate" hreflang="ko" href="https://jimyeol.github.io/kokkok-support/">
+  <link rel="alternate" hreflang="en" href="https://jimyeol.github.io/kokkok-support/en.html">
+  <link rel="alternate" hreflang="ja" href="https://jimyeol.github.io/kokkok-support/ja.html">
   <style>
     :root {
       --violet: #6d5dfc;
@@ -69,6 +72,35 @@
       text-decoration: none;
       font-weight: 800;
       color: var(--muted);
+    }
+
+    .nav-end {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px 12px;
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav .lang a {
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .nav .lang a[aria-current="page"] {
+      background: #f0eef6;
+      color: var(--ink);
     }
 
     .hero {
@@ -203,7 +235,16 @@
         <span class="mark" aria-hidden="true">콕</span>
         <span>구독콕콕</span>
       </div>
-      <a href="privacy.html">개인정보 처리방침</a>
+      <div class="nav-end">
+        <div class="lang" role="group" aria-label="언어 선택">
+          <a href="index.html" hreflang="ko" lang="ko" aria-current="page">한국어</a>
+          <span aria-hidden="true">·</span>
+          <a href="en.html" hreflang="en" lang="en">English</a>
+          <span aria-hidden="true">·</span>
+          <a href="ja.html" hreflang="ja" lang="ja">日本語</a>
+        </div>
+        <a href="privacy.html">개인정보 처리방침</a>
+      </div>
     </nav>
 
     <section class="hero">
@@ -216,7 +257,7 @@
       <h2 id="support-info">지원 정보</h2>
       <p>운영자: mazecube</p>
       <p>문의 이메일: <a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
-      <p><span class="label">시행일 2026-10-10</span></p>
+      <p><span class="label">시행일 2026-10-23</span></p>
     </section>
 
     <section class="grid" aria-label="지원 정보">
@@ -255,7 +296,7 @@
 
     <section class="card" style="margin-top:18px">
       <h2>환율 출처</h2>
-      <p>달러 구독료의 원화 환산은 Frankfurter v1 공개 API의 최신 영업일 USD/KRW 환율을 사용합니다. Frankfurter는 중앙은행과 공식 기관의 공개 기준환율을 모아 제공하며, v1 최신 환율은 영업일 기준 일별 갱신됩니다.</p>
+      <p>외화 구독료를 기준 통화로 환산할 때는 Frankfurter v1 공개 API의 최신 영업일 환율(미국 달러 기준)을 사용합니다. Frankfurter는 중앙은행과 공식 기관의 공개 기준환율을 모아 제공하며, v1 최신 환율은 영업일 기준 일별 갱신됩니다.</p>
       <p>ECB 통계는 출처를 표기하고 통계를 수정하지 않는 조건에서 상업적·비상업적 재사용이 허용됩니다. 구독콕콕의 환율 환산은 사용자가 입력한 금액을 이해하기 위한 참고용 예상 계산입니다.</p>
       <p class="links"><a href="https://frankfurter.dev/v1/">Frankfurter v1 문서</a> <a href="https://frankfurter.dev/license/">Frankfurter License & Terms</a> <a href="https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html">ECB statistics reuse policy</a></p>
       <p>Source: Frankfurter and ECB statistics.</p>
