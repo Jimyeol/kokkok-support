@@ -213,7 +213,7 @@
       <div class="notice">
         <p>Controller of personal information: mazecube</p>
         <p>Contact email: <a href="mailto:crewoongcrewoong@gmail.com">crewoongcrewoong@gmail.com</a></p>
-        <p><span class="label">Effective 2026-10-23 (previous version 2026-10-22)</span></p>
+        <p><span class="label">Effective 2026-11-06 (previous version 2026-10-23)</span></p>
       </div>
 
       <div class="meta" aria-label="Summary of data handling">
@@ -235,6 +235,16 @@
       </ul>
       <p>If you choose a photo as a subscription icon, the app copies the selected photo into the app's private storage. The app does not delete the original photo in your photo library.</p>
 
+      <h3>Card Payment Notification Detection (Android, optional)</h3>
+      <p>On Android, if you turn on "Card payment notification detection" and allow notification access, KokKok analyzes on your device only the <strong>notifications that arrive after setup</strong> from the card or bank apps you choose, to find the merchant name, amount, currency, and time received, and suggests candidates you can review before adding them as subscriptions. This feature is off by default and may run while the app is closed.</p>
+      <ul>
+        <li>Notifications from apps you did not select are not analyzed or stored. The app does not read your SMS inbox, sign in to card or bank accounts, or fetch transaction history from card or bank servers.</li>
+        <li>The original notification text and card or account numbers are not stored. Only candidate summaries (merchant or suggested service name, amount, currency, time received, source app) and detection settings (on/off state, selected apps, merchants you muted, duplicate-prevention data) are stored.</li>
+        <li>Up to 50 candidate summaries are kept in app-private storage, and candidates older than 30 days are deleted the next time you open the detection screen or a new payment is processed. This data is excluded from operating system backups and KokKok backup files.</li>
+        <li>Notification text and candidate summaries are never sent to servers, external AI, or advertising or analytics tools. Nothing is added, paid, or canceled automatically; a subscription is added only after you review and save it.</li>
+        <li>You can turn the feature off or delete candidates on the detection screen, and revoke notification access in Android settings. Once turned off, new notifications are not analyzed.</li>
+      </ul>
+
       <h2>2. About Estimates</h2>
       <div class="callout">
         <p>The amounts, billing dates, countdowns, and statistics shown in the app are estimates calculated from the values you enter. KokKok does not check whether a payment actually succeeded, and it does not automatically cancel or change any external subscription service.</p>
@@ -254,6 +264,10 @@
       </ul>
       <p>Subscription names, amounts, billing dates, payment methods, notes, and photos are not sent. We do not collect advertising IDs (Android Advertising ID, iOS IDFA) or the iOS identifier for vendors (IDFV), and we do not use this information for advertising or personalized ads. This information is processed by Google LLC to provide the Firebase services and may be stored on Google servers outside your country (such as in the United States). It is deleted after Firebase's default retention periods (up to 14 months for usage statistics and 90 days for crash logs). No data is collected in debug (development) builds.</p>
 
+      <h3>Service List Updates and Price Change Alerts (Firebase)</h3>
+      <p>To reflect service price changes without an app update, the app retrieves service list and price information through Google's Firebase Remote Config. This request contains no subscription information or amounts. The retrieved prices are compared with your subscriptions on your device; for subscriptions whose amount you have not edited yourself, the new price is used from the next payment date (earlier payments keep the old price).</p>
+      <p>We use Firebase Cloud Messaging to send price change push notifications. For this, a push token is issued per app installation, and the app subscribes to price alert topics for the services you have added (e.g., price_netflix_kr). Information you enter, such as subscription names, amounts, and billing dates, is not sent. The push token is processed by Google LLC to deliver notifications, and you will not receive them if you turn notifications off in your device settings.</p>
+
       <h3>Service Logos</h3>
       <p>To show a service's actual logo in your subscription list, the first time a logo is displayed the app requests the icon from Google's favicon service or the service's own website using the service's address (e.g., netflix.com), and saves the received logo in the device's cache folder. This request does not include information you have entered, such as subscription amounts or notes.</p>
 
@@ -264,8 +278,9 @@
       <ul>
         <li>Notifications: used to send local notifications before the billing dates you set.</li>
         <li>Photo library: used only when you choose a photo to use as a subscription icon.</li>
-        <li>Internet: used for automatic exchange rate updates, loading service logos, and sending usage statistics and crash logs.</li>
+        <li>Internet: used for automatic exchange rate updates, service list and price updates, loading service logos, receiving price change notifications, and sending usage statistics and crash logs.</li>
         <li>Receive boot completed (Android): used to keep scheduled local notifications after the device restarts.</li>
+        <li>Notification access (Android, optional): used only when you turn on card payment notification detection and agree, to find subscription candidates in payment notifications from the card or bank apps you select.</li>
       </ul>
 
       <h2>5. Retention and Deletion</h2>
@@ -276,7 +291,7 @@
       <p>To display home screen and lock screen widgets, upcoming payment information (service name, amount, billing date, and icon) is stored in the widget shared storage on your device. This information is not sent off your device.</p>
 
       <h2>6. Sharing with Third Parties and Outsourced Processing</h2>
-      <p>We do not provide or share the subscription information you enter with third parties. We entrust the processing of app usage statistics and crash logs to Google LLC (Firebase) to improve the service. Exchange rate requests contain no subscription information and are used only to look up exchange rates.</p>
+      <p>We do not provide or share the subscription information you enter with third parties. We entrust the processing of app usage statistics and crash logs, service list updates, and price change push notifications to Google LLC (Firebase). Exchange rate requests contain no subscription information and are used only to look up exchange rates.</p>
 
       <h2>7. Children's Privacy</h2>
       <p>KokKok is not a service directed primarily at children, and the current version does not offer sign-up or account features.</p>
@@ -285,6 +300,7 @@
       <p>If sign-in, server backup, advertising, or payment features are added, or if the information we collect changes, we will update both this Privacy Policy and the app store privacy disclosures.</p>
       <p>Changes on 2026-10-22: Added information about app usage statistics and crash logs (Firebase), loading service logos, exporting backup files, and home screen widgets.</p>
       <p>Changes on 2026-10-23: Added that app language (Korean, English, Japanese), region, and base currency settings are stored on your device, and that exchange rates are looked up for multiple currencies.</p>
+      <p>Changes on 2026-11-06: Added service list and price updates (Firebase Remote Config), price change push notifications (Firebase Cloud Messaging), and optional card payment notification detection on Android.</p>
 
       <h2>9. Contact</h2>
       <p>For privacy-related inquiries, please contact us at the email address below.</p>
